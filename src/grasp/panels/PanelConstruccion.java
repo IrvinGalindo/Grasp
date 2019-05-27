@@ -87,7 +87,7 @@ public class PanelConstruccion extends javax.swing.JPanel {
         boolean isStep = false;
         switch (orden) {
             case 1:
-                lblTexto.setText("Primero se ejecuta la fase de construccion en la cual se creara la soluion parcial");
+                lblTexto.setText("Primero se ejecuta la fase de construccion en la cual se creara la solucion parcial");
 
                 Object ob[] = new Object[cosas.size()];
                 for (int i = 0; i < ob.length; i++) {
@@ -103,8 +103,8 @@ public class PanelConstruccion extends javax.swing.JPanel {
                 break;
             case 2:
 
-                lblTexto.setText("<html><body>Paso 1: Genera una lista del mismo tamaño que la lista de candidatos llamada solución parcial,<br> en la que cada posición de la lista hará alusión a la posición del objeto<br>"
-                        + " que se encuentra en la lista de candidatos y estará llena de 0’s<html><body>");
+                lblTexto.setText("<html><body>Paso 1: Genera una lista del mismo tamaño que la lista de candidatos llamada solucion parcial,<br> en la que cada posicion de la lista hace referencia a la posición del objeto<br>"
+                        + " que se encuentra en la lista de candidatos y estara llena de 0’s<html><body>");
                 for (int sol = 0; sol < solucionParcial.length; sol++) {
                     modalLcand.setValueAt(0, 0, sol);
                 }
@@ -131,9 +131,9 @@ public class PanelConstruccion extends javax.swing.JPanel {
                 double mayor = 0;
                 lblTexto.setText("<html><body>Paso 3: Elabora una lista restringida de los 4 mejores candidatos que arrojen el mayor índice de utilidad.<br>"
                         + "Paso 4: Aleatoriamente selecciona uno de los 4 objetos de la lista restringida, <br>"
-                        + "Paso 5: Asigna el obtenido a la lista llamada solución parcial,cambiando el 0 que tenía por un 1 <br>"
-                        + "en la posición que se encontraba en la lista de candidatos, cuidando no sobrepasar <br>"
-                        + "la capacidad de carga de la mochila y del excursionista, es 15 en ambos casos <br>"
+                        + "Paso 5: Asigna el obtenido a la lista llamada solución parcial,cambiando el 0 que tenia por un 1 <br>"
+                        + "en la posicion que se encontraba en la lista de candidatos, cuidando no sobrepasar <br>"
+                        + "la capacidad de carga de la mochila y del excursionista, la cual es de 15 kg en ambos casos <br>"
                         + "1 significa que si entra en la mochila, 0 que no va dentro de la mochila.</body></html>");
                 Object obLCR[] = new Object[1];
                 while (contador < limiteLR) {
@@ -176,10 +176,10 @@ public class PanelConstruccion extends javax.swing.JPanel {
                                 sumatoriaUtilidad += cosas.get(ele).getUtilidad();
                                 lblSumUti.setText(sumatoriaUtilidad + "");
                                 RCLMofi(random);
-                                lblTexto.setText("<html><body>Paso 6: Elimina de la lista de candidatos el objeto introducido a la lista solución parcial. <br>"
-                                        + "Paso 7: Elabora de nuevo una lista de candidatos restringida de 4 objetos ya sin el  que se haya seleccionado.<br>"
+                                lblTexto.setText("<html><body>Paso 6: Elimina de la lista de candidatos el objeto introducido a la lista solucion parcial. <br>"
+                                        + "Paso 7: Elabora de nuevo una lista de candidatos restringida de 4 objetos ya sin el que se haya seleccionado anteriormente.<br>"
                                         + "Paso 8: Repite el paso 4, 5, 6 y 7  hasta que el algoritmo haya verificado que no se pueda ingresar <br>"
-                                        + "otro candidato a la lista de solución parcial debido a la restricción del peso. (15 kg)<html><body>");
+                                        + "otro candidato a la lista de solucion parcial debido a la restricción del peso. (15 kg)<html><body>");
                                 break;
                             } else {
                                 sumatoriaPeso -= cosas.get(ele).getPeso();

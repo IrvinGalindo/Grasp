@@ -54,8 +54,8 @@ public class PanelMejora extends javax.swing.JPanel {
                 tblSolParcialMej.setModel(PanelConstruccion.getModal());
                 lblMejora.setText("<html><body>Paso 9: Una vez obtenida la solución parcial, genera soluciones vecinas en donde<br> se almacenarán nuevas soluciones.<br>"
                         + "Paso 10: Se compara dentro de la lista de la solución parcial cual es 0 y cual es 1, y en base a ello<br>"
-                        + "va creando nuevas listas de vecinos modificando únicamente esa posición del objeto. <br> Paso 11: Los vecinos son comparados con lo solución parcial para verificar <br>"
-                        + " cual es el que contiene la utilidad máxima y no pase la capacidad de la mochila, y en caso de que un vecino sea mejor que la primera solución obtenida, esta lo reemplazará."
+                        + "va creando nuevas listas de vecinos modificando únicamente esa posición del objeto. <br> Paso 11: Se compara el vecino generado de la iteraccion actual contra el mejor vecino generado en una iteracion anterior <br>"
+                        + "para verificar cual es el que contiene la utilidad maxima y no pase la capacidad de la mochila, el vecino con el mejor resultado sera el mejor vecino de la iteracion y este sera comparado en la siguiente iteracion."
                         + "</body></html>");
 
                 if (contador < solucionParcial.length) {
